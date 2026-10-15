@@ -1,0 +1,26 @@
+{
+  "name": "whatsapp-cloud-api-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp salon chatbot on Meta Cloud API. All salon data (details, services, prices, time slots) is fetched from a backend API; a dummy salon backend is included for testing.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "backend": "node backend/server.js",
+    "test": "node --test test/flow.test.js test/mock-backend.test.js test/server.test.js test/pagination.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cache": "^5.1.2",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
